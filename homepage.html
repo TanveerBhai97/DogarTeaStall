@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DoGaR Tea Stall</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    body {
+      background-color:rgb(17, 16, 16);
+    }
+
+    /* Navbar */
+    .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color:rgb(189, 5, 5);
+    border-bottom: 1px solid green;
+    font-size:30px;
+    color:white;
+  }
+  
+  .logo img {
+    width: 100px;
+    height: 50px;
+    object-fit: cover;
+  }
+  
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-bar input, .search-bar button {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px ;
+    color: #fff;
+  }
+  .search-bar button
+   {
+    background-color:rgb(17, 17, 17);
+    cursor: pointer;
+  }
+  
+  .icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .shopping-cart, .favorite {
+    padding: 10px;
+    border: black;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .shopping-cart i, .favorite i {
+    font-size: 24px;
+  }
+  
+    /* Slider */
+    .slider {
+      width:  95%;
+      height: 400px;
+      overflow: hidden;
+      position: relative;
+      border:red 2px solid; 
+      border-radius:5px;
+      margin:0px 30px ;
+      box-shadow: 2px 10px 15px rgba(132, 206, 12, 0.8);
+    }
+
+    .slides {
+      display: flex;
+      width: 300%;
+      animation: slide 15s infinite;
+    }
+
+    .slides img {
+      width: 110%;
+      height: 400px;
+      object-fit: cover;
+    }
+    @keyframes slide {
+      0% { margin-left: 0; }
+      33% { margin-left: 0; }
+      36% { margin-left: -100%; }
+      66% { margin-left: -100%; }
+      69% { margin-left: -200%; }
+      99% { margin-left: -200%; }
+      100% { margin-left: 0; }
+    }
+    
+
+    /* Categories */
+    .section-heading {
+      text-align: center;
+      margin: 30px 0 10px;
+      font-size: 40px;
+      color: red;
+    }
+
+    .categories, .products {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 20px;
+    }
+
+    .category-box, .product-box {
+      width: 300px;
+      height: 250px;
+      background-color: red;
+      color:white;
+      font-size:30px;
+      border-radius: 8px;
+      box-shadow: 2px 10px 15px rgba(132, 206, 12, 0.8);
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .category-box img, .product-box img {
+      width: 100%;
+      height: 180px;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      object-fit: cover;
+    }
+
+    .category-box p, .product-box p {
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    /* Circular Boxes */
+    .circle-section {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 40px;
+    }
+
+    .circle-box {
+      width: 300px;
+      height: 280px;
+      border-radius:8px;
+      overflow: hidden;
+      background-color: red;
+      box-shadow:2px 10px 15px rgba(132, 206, 12, 0.8); 
+      text-align: center;
+    }
+
+    .circle-box img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+
+    .circle-box p {
+      font-size: 18px;
+      font-weight: bold;
+      padding-top: 10px;
+      color:white;
+    }
+
+    /* Video + Text Section */
+    .video-text {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 30px;
+    }
+
+    .video-box, .text-box {
+      width: 400px;
+      height: 300px;
+      background-color:rgba(206, 35, 12, 0.87); ;
+      box-shadow: 2px 10px 15px rgba(132, 206, 12, 0.8);
+      padding: 10px;
+    }
+
+    .video-box video {
+      width: 100%;
+      height: 100%;
+    }
+
+    .text-box p {
+      font-size: 20px;
+        line-height: 1.5;
+        color:white;
+      }
+  
+      /* Location Section */
+      .location-section {
+        width: 400px;
+        height: 300px;
+        margin: 40px auto;
+        background-color: red;
+        color:white;
+        font-size:20px;
+        text-align: center;
+        box-shadow:2px 10px 15px rgba(132, 206, 12, 0.8);
+        padding: 10px;
+      }
+  
+      .location-section img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+  
+      .location-section h3 {
+        margin-top: 10px;
+      }
+  
+      /* Footer */
+      footer {
+        background-color:rgb(245, 25, 25);
+        color: white;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        border-radius:9px;
+      }
+  
+      .footer-left {
+        font-size: 30px;
+        font-weight: bold;
+      }
+      .footer-left img{
+        width: 220px;
+        height: 160px;
+        object-fit: cover;
+        border:2px solid black;
+        border-radius:5px;
+        box-shadow: 2px 10px 15px rgba(132, 206, 12, 0.8);
+      }
+  
+      .footer-right {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+  
+      .footer-right a {
+        color: white;
+        text-decoration: none;
+
+      }
+  
+      .footer-right a:hover {
+        text-decoration: underline;
+        color:black;
+      }
+      body{
+        background-color:black;
+      }
+      marquee{
+        font-size:30px;
+        justify-content:center;
+        align-items:center;
+        background-color:red;
+        color:white;
+        border-radius:8px;
+         width:95%;
+          height:40px;
+          margin-left:30px;
+          border:2px solid green;
+          box-shadow:2px 10px 15px rgba(132, 206, 12, 0.8);
+      }
+      h3{
+        color:yellow;
+        
+      }
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .social-icon {
+        background-color:blue;
+        margin: 10px;
+        text-decoration: none;
+        color: white;
+        border:1px solid black;
+        border-radius:5px;
+      }
+      
+      .social-icon i {
+        font-size: 24px;
+        margin-right: 10px;
+      }
+      
+      .footer-right {
+        display: flex;
+        align-items: center;
+        
+      }
+      
+      .submit-btn{
+        background-color:black;
+        color:white;
+      }
+      
+      
+      
+    </style>
+  </head>
+  <body>
+  
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">
+        <img src="" alt="Doگar Tea Stall">
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Search...">
+        <button>Search</button>
+      </div>
+      <div class="icons">
+        <button class="shopping-cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+        <button class="favorite">
+        <i class="fa-solid fa-heart"></i>
+        </button>
+      </div>
+    </nav>
+    
+  
+    <!-- Slider -->
+    <div class="slider">
+      <div class="slides">
+        <img src="images/juice.jpg" alt="Slide 1">
+        <img src="images/tea3.jpg" alt="Slide 2">
+        <img src="images/bottlessss.jpg" alt="Slide 3">
+      </div>
+    </div>
+
+    <div>
+  <marquee direction="right" >آپ کو ڈوگر ٹی سٹال پر اعلیٰ اقسام کی چیزیں مہیا کی جائینگی جس میں گرم چائے،فرش اور ٹھنڈا جوس وغیرہ شامل ہیں ہمارے پاس تشریف لے کر آئیں اور خدمات کا موقع فراہم کریں۔ شکریہ</marquee></div>
+    <!-- Categories -->
+    <h2 class="section-heading">Categories</h2>
+    <div class="categories">
+      <div class="category-box" onclick="alert('Green tea - Price: 100 PKR')">
+        <img src="images/tea3.jpg" alt="">
+        <p>Tea Cup</p>
+      </div>
+      <div class="category-box" onclick="alert('Cigarette  - Price: 120 PKR To 500 PKR')">
+        <img src="images/cigarette2.jpg" alt="">
+        <p>Cigarette</p>
+      </div>
+      <div class="category-box" onclick="alert('Different Juices - Price: 130 PKR To 300 PKR')">
+        <img src="images/juice3.jpg" alt="">
+        <p>Juice</p>
+      </div>
+      <div class="category-box" onclick="alert('Different Bottles(Pepsi,String) - Price: 100 PKR To 350 PKR')">
+        <img src="images/bottlessss.jpg" alt="">
+        <p>Bottles</p>
+      </div>
+    </div>
+  
+    <!-- Products -->
+    <h2 class="section-heading">Products</h2>
+    <div class="products">
+      <div class="product-box"  onclick="alert('Green tea - Price: 100 PKR')">
+        <img src="images/tea2.jpg" alt="">
+        <p>Tea Cup</p>
+      </div>
+      <div class="product-box"  onclick="alert('MilkShake  - Price: 150 PKR')">
+        <img src="images/juice2.jpg" alt="">
+        <p>Juice</p>
+      </div>
+      <div class="product-box"  onclick="alert('capstan Cigarette - Price: 400 PKR')">
+        <img src="images/cigarette3.jpg" alt="">
+        <p>Cigarette Capstan</p>
+      </div>
+      <div class="product-box" onclick="alert('string - Price: 120 PKR')">
+        <img src="images/bottlessss.jpg" alt="">
+        <p>Bottles(pepsi,string)</p>
+      </div>
+      <div class="product-box"  onclick="alert('hot chai - Price: 60 PKR')">
+        <img src="images/cupchiya.jpg" alt="">
+        <p>Zafran Chai</p>
+      </div>
+      <div class="product-box" onclick="alert('Marvi cigarette - Price: 190 PKR')">
+        <img src="images/cigarette.jpg" alt="">
+        <p>Cigarette Marvi</p>
+      </div>
+      <div class="product-box"  onclick="alert('lemon juice - Price: 120 PKR')">
+        <img src="images/juice.jpg" alt="">
+        <p>Juice(Milkshake...)</p>
+      </div>
+      <div class="product-box"  onclick="alert('Zafran Chai - Price: 120 PKR')">
+        <img src="images/cupchiya2.jpg" alt="">
+        <p>Zafran Chai</p>
+      </div>
+    </div>
+  
+    <!-- Round Boxes -->
+    <div class="circle-section">
+      
+      <div class="circle-box">
+        <img src="images/IMG_20250506_210957 (1).jpg" alt="">
+        <p>CEO: M.Shakeel</p>
+      </div>
+      <div class="circle-box">
+        <img src="images/IMG_20250506_210900 (1).jpg" alt="">
+        <p>WebMaker: M.Tanveer</p>
+      </div>
+    </div>
+  
+    <!-- Video + Text -->
+    <div class="video-text">
+      <div class="video-box">
+        <video controls  loop>
+          <source src="images/video_20250505_171209_edit.mp4" type="video/mp4" />
+          
+        </video>
+      </div>
+      <div class="text-box">
+        <h3 >ڈوگر ٹی سٹل</h3>
+        <p>
+          ڈوگر ٹی اسٹال آپ کے لیے روایتی اور جدید چائے کا بہترین امتزاج پیش کرتا ہے۔
+          ہر گھونٹ کے ساتھ ذائقہ، تازگی اور مٹھاس سے بھرے کپ کا لطف اٹھائیں۔
+          چائے کے بہترین تجربے کے لیے ہم سے ملیں یا آن لائن آرڈر کریں۔
+        </p>
+      </div>
+    </div>
+  
+    <!-- Location -->
+    <div class="location-section">
+      <img src="images/IMG_20250505_171257.jpg" alt="">
+      <h3>Location</h3>
+      <p>Ameer Pur Astation, Kahror Pakka</p>
+    </div>
+  
+    <!-- Footer -->
+    <footer>
+      <div class="footer-left" >Doگar Tea Stall<br><img src="images/WhatsApp Image 2025-05-07 at 12.23.52_c1d75064.jpg"></div>
+      <div class="footer-logo">
+      
+      </div>
+      
+        <div class="social-icons">
+
+          <a href="https://facebook.com/" class="social-icon">
+          
+            <i class="fa-brands fa-facebook"></i>
+            <span>Facebook</span>
+          </a>
+          <a href="https://youtube.com/" class="social-icon">
+            <i class="fa-brands fa-youtube"></i>
+            <span>Youtube</span>
+          </a>
+          
+          <a href="https://www.whatsapp.com/" class="social-icon">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>whatsapp</span>
+          </a>
+          <a href="https://www.instagram.com/" class="social-icon">
+            <i class="fa-brands fa-instagram"></i>
+            <span>Instagram</span>
+          </a>
+        </div> 
+        
+        <div class=".footer-right">
+          <p> Address:Ameer Pur Astation</p><br>
+          <p>Account No:03015555486</p>
+        <br>
+            <input type="something write here" placeholder="something write here">
+            <br>
+            <button class="submit-btn">Submit</button>
+          
+          </div>
+    </footer>
+  <script>
+    
+  </script>
+  </body>
+  </html>

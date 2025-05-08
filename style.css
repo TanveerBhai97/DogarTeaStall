@@ -1,0 +1,227 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #454647, #494b4b);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-container {
+      background: rgb(17, 17, 17);
+      color: #cf0606;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #960303;
+    }
+
+    .input-group {
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    .input-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 10px 40px 10px 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .toggle-password {
+      position: absolute;
+      right: 10px;
+      top: 37px;
+      cursor: pointer;
+      font-size: 14px;
+      color: #e21d1d;
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 10px;
+      background: #cf0606;
+      border: none;
+      border-radius: 8px;
+      color: rgb(27, 27, 27);
+      font-size: 20px;
+      font-style:normal;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    
+
+    .login-btn:hover {
+      background: #07e27c;
+      color: red;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: -10px;
+      margin-bottom: 10px;
+    }
+    .reset-container{
+      background: rgb(7, 209, 199);
+      color: #0c0c0c;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+    .input-gro{
+      margin-bottom: 15px;
+      position: relative;
+    }
+    .input-gro label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    .input-gro input {
+      width: 100%;
+      padding: 10px 40px 10px 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .reset-container h2{
+    text-align: center;
+      margin-bottom: 20px;
+      color: #960303;
+    }
+    .reset-btn{
+      width: 100%;
+      padding: 10px;
+      background: #cf0606;
+      border: none;
+      border-radius: 8px;
+      color: rgb(27, 27, 27);
+      font-size: 20px;
+      font-style:normal;
+      cursor: pointer;
+      transition: background 0.3s;
+
+    }
+    .reset-btn:hover{
+      background: #07e27c;
+      color: red;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body, html {
+      font-family: 'Segoe UI', sans-serif;
+      scroll-behavior: smooth;
+    }
+    
+    header.hero {
+      background: url('https://source.unsplash.com/1600x900/?nature,landscape') no-repeat center center/cover;
+      height: 100vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    
+    nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 50px;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+    
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    
+    .nav-links a:hover {
+      color: #f9a825;
+    }
+    
+    .hero-content {
+      text-align: center;
+      margin-bottom: 100px;
+    }
+    
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+    
+    button {
+      padding: 12px 30px;
+      background: #f9a825;
+      border: none;
+      color: #fff;
+      font-size: 1rem;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    
+    button:hover {
+      background: #c17900;
+    }
+    
+    .section {
+      padding: 80px 50px;
+      text-align: center;
+      background: #fff;
+    }
+    
+    .section.alt {
+      background: #f0f0f0;
+    }
+    
+    footer {
+      background: #222;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+    
